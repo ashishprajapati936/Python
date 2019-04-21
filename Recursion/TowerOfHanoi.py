@@ -2,11 +2,11 @@ def toh(disks,source,aux,target):
 	if disks==1:
 		print("Move disk from {} to {}".format(source,target))
 		return
-	#move n-1 disks from A to B
+	#move n-1 disks from source to aux
 	toh(disks-1,source,target,aux)
-	#move nth disks from A to C
+	#move nth disks from source to targer
 	print("Move disk from {} to {}".format(source,target))
-	#move n-1 disks from B to C
+	#move n-1 disks from aux to taget
 	toh(disks-1,aux,source,target)
 	
 n=int(input("Please enter number of disks: "))
